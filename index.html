@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<!-- deploy-ts: 2026-05-29 23:45:00 -->
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -386,7 +385,7 @@
   <div class="brand-line">虾教练·为边伟定制</div>
   <div class="thank-line">感谢Xiaohan一直以来的支持与鼓励</div>
   <div class="motto-line">让我们遇见更好的自己，帮人们过上更好的生活</div>
-  <!-- <img src="nglogo.png" alt="NG Logo" class="footer-logo"> -->
+  <img src="nglogo.png" alt="NG Logo" class="footer-logo">
 </div>
 
 <script>
@@ -400,6 +399,8 @@ function f(n) { return Number(n).toFixed(1); }
 // ===== 饮食记录 =====
 // 格式：{ date: "YYYY-MM-DD", meal: "餐次", items: "食物描述", photo: "图片路径或空", cal: 热量, protein: 蛋白质, carbs: 碳水, fat: 脂肪, fiber: 纤维 }
 const MEALS = [
+  // 在这里添加饮食记录，例如：
+  // { date: "2026-01-01", meal: "早餐", items: "全麦面包2片+鸡蛋1个", photo: "", cal: 350, protein: 20, carbs: 40, fat: 10, fiber: 3 },
 ];
 
 
@@ -407,11 +408,11 @@ const MEALS = [
 // 格式：{ date: "YYYY-MM-DD", weight: 体重数字或null, exercise: "运动", note: "备注", body: { bf: 体脂率, muscle: 肌肉量, visceral: 内脏脂肪, bmi: BMI } }
 // body 可为 null（无体成分数据时）
 const DATA = [
-    { date: "2026-05-29", weight: 62.0, exercise: "", note: "初始记录", body: null },
+  { date: "", weight: 62.0, exercise: "", note: "初始", body: null },
 ];
 
 const GOAL = 54.0; // 用户目标体重（修改此值）
-const GOAL_DATE = '';
+const GOAL_DATE = '目标日期（可修改）';
 // ===== 以下为渲染逻辑 =====
 // ===== 以下为渲染逻辑 =====
 const DAYS = ['日','一','二','三','四','五','六'];
@@ -753,3 +754,5 @@ document.addEventListener('click', e => {
 </script>
 </body>
 </html>
+
+<!-- deploy-ts: 2026-05-30 01:03:03 -->
